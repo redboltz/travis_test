@@ -20,11 +20,11 @@ env:
 matrix:
   exclude:
     - os: osx
-      env: ACTION="echo" PARAM="B"
       compiler: gcc
     - os: osx
+      env: ACTION="echo" PARAM="B"
+    - os: osx
       env: ACTION="echo" PARAM="C"
-      compiler: gcc
     - os: linux
       env: ACTION="echo" PARAM="A"
     - os: linux
