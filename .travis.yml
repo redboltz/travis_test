@@ -4,14 +4,17 @@ os:
   - linux
 
 env:
-  - ACTION="echo" PARAM="cpp11"
-  - ACTION="echo" PARAM="cpp03"
+  - ACTION="echo" PARAM="A"
+  - ACTION="echo" PARAM="B"
+  - ACTION="echo" PARAM="C"
 
 matrix:
   exclude:
     - os: osx
-      env: ACTION="echo" PARAM="cpp03"
+      env: ACTION="echo" PARAM="A"
+      env: ACTION="echo" PARAM="B"
     - os: linux
-      env: ACTION="echo" PARAM="cpp11"
+      env: ACTION="echo" PARAM="B"
+      env: ACTION="echo" PARAM="C"
 script:
   - git clean -xdf && ${ACTION} ${PARAM}
