@@ -23,8 +23,13 @@ branches:
 env:
   - ACTION="echo" PARAM="cpp11"
   - ACTION="echo" PARAM="cpp03"
-  - ACTION="echo" PARAM="cpp11"
-  - ACTION="echo" PARAM="cpp03"
+
+matrix:
+  exclude:
+    -os: osx
+    env: ACTION="echo" PARAM="cpp11"
+    -os: linux
+    env: ACTION="echo" PARAM="cpp03"
 
 script:
   - git clean -xdf && ${ACTION} ${PARAM}
