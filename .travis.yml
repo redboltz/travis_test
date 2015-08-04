@@ -11,8 +11,7 @@ env:
 matrix:
   exclude:
     - os: osx
-      env: ACTION="echo" PARAM="A"
-      env: ACTION="echo" PARAM="B"
+      env: [ACTION="echo" PARAM="A", ACTION="echo" PARAM="B"]
     - os: linux
       env: ACTION="echo" PARAM="B"
       env: ACTION="echo" PARAM="C"
