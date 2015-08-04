@@ -2,9 +2,6 @@ language: ruby
 os:
   - osx
 
-before_install:
-install:
-branches:
 env:
   - ACTION="echo" PARAM="cpp11"
   - ACTION="echo" PARAM="cpp03"
