@@ -3,6 +3,10 @@ os:
   - osx
   - linux
 
+before_install:
+  - echo "before install 1"
+  - echo "before install 2"
+  - echo "before install 3"
 env:
   - ACTION="echo" PARAM="A"
   - ACTION="echo" PARAM="B"
