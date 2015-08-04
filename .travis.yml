@@ -3,6 +3,10 @@ os:
   - osx
   - linux
 
+compiler:
+  - clang
+  - gcc
+
 before_install:
   - if [ "$TRAVIS_OS_NAME" == "osx" ]; then echo "before install osx1"; fi
   - if [ "$TRAVIS_OS_NAME" == "osx" ]; then echo "before install osx2"; fi
@@ -17,8 +21,10 @@ matrix:
   exclude:
     - os: osx
       env: ACTION="echo" PARAM="B"
+      compiler: gcc
     - os: osx
       env: ACTION="echo" PARAM="C"
+      compiler: gcc
     - os: linux
       env: ACTION="echo" PARAM="A"
     - os: linux
