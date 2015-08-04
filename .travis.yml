@@ -2,9 +2,6 @@ language: ruby
 os:
   - osx
 
-compiler:
-  - clang
-
 before_install:
 install:
 branches:
