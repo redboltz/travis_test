@@ -4,9 +4,10 @@ os:
   - linux
 
 before_install:
-  - echo "before install 1"
-  - echo "before install 2"
-  - echo "before install 3"
+  - echo "before install osx1"
+  - echo "before install osx2"
+  - echo "before install linux1"
+  - echo "before install linux2"
 env:
   - ACTION="echo" PARAM="A"
   - ACTION="echo" PARAM="B"
@@ -16,10 +17,14 @@ matrix:
   exclude:
     - os: osx
       env: ACTION="echo" PARAM="A"
+      before_install:
+        - echo "before install linux1"
+        - echo "before install linux2"
     - os: osx
       env: ACTION="echo" PARAM="B"
     - os: linux
       env: ACTION="echo" PARAM="B"
       env: ACTION="echo" PARAM="C"
+      before_install: echo "before install osx1"
 script:
   - git clean -xdf && ${ACTION} ${PARAM}
