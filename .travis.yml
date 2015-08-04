@@ -17,13 +17,11 @@ matrix:
   exclude:
     - os: osx
       env: ACTION="echo" PARAM="A"
-      before_install:
-        - echo "before install linux1"
-        - echo "before install linux2"
+      before_install: echo "before install linux1"
     - os: osx
       env: ACTION="echo" PARAM="B"
+      before_install: echo "before install linux2"
     - os: linux
-      env: ACTION="echo" PARAM="B"
       env: ACTION="echo" PARAM="C"
       before_install: echo "before install osx1"
 script:
