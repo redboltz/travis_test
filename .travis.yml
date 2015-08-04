@@ -15,4 +15,4 @@ env:
 matrix:
 
 script:
-  - git clean -xdf && ${ACTION} ${PARAM}
+  - git clean -xdf && ${ACTION} ${PARAM} & uname -a
