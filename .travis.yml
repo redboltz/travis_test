@@ -12,6 +12,8 @@ before_install:
   - if [ "$TRAVIS_OS_NAME" == "osx" ]; then echo "before install osx2"; fi
   - if [ "$TRAVIS_OS_NAME" == "linux" ]; then echo "before install linux1"; fi
   - if [ "$TRAVIS_OS_NAME" == "linux" ]; then echo "before install linux2"; fi
+  - pwd
+
 env:
   - ACTION="echo" PARAM="A"
   - ACTION="echo" PARAM="B"
@@ -30,4 +32,4 @@ matrix:
     - os: linux
       env: ACTION="echo" PARAM="C"
 script:
-  - git clean -xdf && ${ACTION} ${PARAM}
+  - git clean -xdf && ${ACTION} ${PARAM} && pwd
