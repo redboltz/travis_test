@@ -1,43 +1,20 @@
 language: cpp
-os:
-  - osx
-  - linux
-
-compiler:
-  - clang
-  - gcc
-
-before_install:
-  - if [ "$TRAVIS_OS_NAME" == "osx" ]; then echo "before install osx1"; fi
-  - if [ "$TRAVIS_OS_NAME" == "osx" ]; then echo "before install osx2"; fi
-  - if [ "$TRAVIS_OS_NAME" == "linux" ]; then echo "before install linux1"; fi
-  - if [ "$TRAVIS_OS_NAME" == "linux" ]; then echo "before install linux2"; fi
-  - pwd
-  - echo $PARAM
-
-install:
-  - echo $PARAM
-
-env:
-  - ACTION="echo" PARAM="A"
-  - ACTION="echo" PARAM="B"
-  - ACTION="echo" PARAM="C"
+sudo: false
+dist: precise
 
 matrix:
-  exclude:
-    - os: osx
-      compiler: gcc
-    - os: osx
-      env: ACTION="echo" PARAM="B"
-    - os: osx
-      env: ACTION="echo" PARAM="C"
     - os: linux
-      env: ACTION="echo" PARAM="A"
-    - os: linux
-      env: ACTION="echo" PARAM="C"
-before script:
-  - echo $PARAM
+      compiler: clang
+      addons:
+        apt:
+          packages:
+            - g++-multilib
+            - gcc-multilib
+            - gcc-5-multilib
+            - g++-5-multilib
+            - bzip2
+            - clang-4.0
+            - libc6-dbg
 
 script:
-  - echo $PARAM
-  - git clean -xdf && ${ACTION} ${PARAM} && pwd
+  - clang --version
