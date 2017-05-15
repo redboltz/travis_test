@@ -2,6 +2,7 @@ language: cpp
 sudo: false
 
 matrix:
+  include:
     - os: linux
       compiler: clang
       addons:
