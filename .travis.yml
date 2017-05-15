@@ -1,10 +1,21 @@
 language: cpp
 sudo: false
-dist: precise
 
 matrix:
     - os: linux
       compiler: clang
+      addons:
+        apt:
+          packages:
+            - g++-multilib
+            - gcc-multilib
+            - gcc-5-multilib
+            - g++-5-multilib
+            - bzip2
+            - clang-4.0
+            - libc6-dbg
+    - os: linux
+      compiler: gcc
       addons:
         apt:
           packages:
