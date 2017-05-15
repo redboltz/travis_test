@@ -9,7 +9,7 @@ matrix:
       addons:
         apt:
           sources:
-            - ubuntu-precise
+            - llvm-toolchain-precise-4.0
           packages:
             - clang-4.0
 script:
