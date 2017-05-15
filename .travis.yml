@@ -2,6 +2,9 @@ language: cpp
 sudo: false
 dist: precise
 
+install:
+ - if [ "$TRAVIS_OS_NAME" == "osx"]; then brew install llvm; fi
+
 matrix:
   include:
     - os: linux
@@ -11,8 +14,10 @@ matrix:
           sources:
             - ubuntu-toolchain-r-test
             - llvm-toolchain-precise
-            - llvm-toolchain-precise-4.0
+            - llvm-toolchain-precise-3.9
           packages:
-            - clang-4.0
+            - clang-3.9
+    - os: osx
+      compiler: clang
 script:
   - clang --version
