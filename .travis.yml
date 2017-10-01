@@ -21,4 +21,4 @@ matrix:
     - os: osx
       compiler: clang
 script:
-  - sudo find / -name "zlib.*" -print
+  - sudo find / -name "zconf.*" -print
