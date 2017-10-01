@@ -20,4 +20,4 @@ matrix:
     - os: osx
       compiler: clang
 script:
-  - clang --version; sudo find / -name "*zconf*"
+  - sudo find / -name "zlib*"
