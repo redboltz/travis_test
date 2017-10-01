@@ -15,9 +15,9 @@ matrix:
             - ubuntu-toolchain-r-test
             - llvm-toolchain-precise
             - llvm-toolchain-precise-3.9
-            - lib32z1-dev
           packages:
             - clang-3.9
+            - lib32z1-dev
     - os: osx
       compiler: clang
 script:
