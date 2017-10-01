@@ -15,9 +15,10 @@ matrix:
             - ubuntu-toolchain-r-test
             - llvm-toolchain-precise
             - llvm-toolchain-precise-3.9
+            - lib32z1-dev
           packages:
             - clang-3.9
     - os: osx
       compiler: clang
 script:
-  - clang --version
+  - clang --version && find / -name "zconf.h"
