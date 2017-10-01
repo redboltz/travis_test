@@ -2,7 +2,7 @@ language: cpp
 sudo: false
 
 install:
- - if [ "$TRAVIS_OS_NAME" == "osx"]; then brew install llvm; fi
+ - if [ "$TRAVIS_OS_NAME" == "osx" ]; then brew install llvm; fi
 
 matrix:
   include:
