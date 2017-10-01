@@ -21,4 +21,4 @@ matrix:
     - os: osx
       compiler: clang
 script:
-  - clang --version; find / -name "zconf.h"
+  - clang --version; sudo find / -name "zconf.h"
