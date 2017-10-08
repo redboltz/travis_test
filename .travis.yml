@@ -2,8 +2,8 @@ language: cpp
 sudo: false
 dist: trusty
 
-install:
- - if [ "$TRAVIS_OS_NAME" == "osx" ]; then brew install llvm; fi
+#install:
+# - if [ "$TRAVIS_OS_NAME" == "osx" ]; then brew install llvm; fi
 
 matrix:
   include:
@@ -16,10 +16,10 @@ matrix:
             - llvm-toolchain-precise
             - llvm-toolchain-precise-3.9
           packages:
-            - clang-3.9
-            - lib32z1-dev
-            - zlib1g-dev
-    - os: osx
-      compiler: clang
+#            - clang-3.9
+             - lib64z1-dev
+#            - lib32z1-dev
+#    - os: osx
+#      compiler: clang
 script:
-  - sudo find / -name "zconf.*" -print
+  - sudo find / -name "zlib*" -print
