@@ -24,4 +24,5 @@ matrix:
 #      compiler: clang
 script:
   - sudo find / -name "libz.a" -print
+  - sudo find / -name "libz.so" -print
   - sudo find / -name "zconf.h" -print
