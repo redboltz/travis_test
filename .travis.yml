@@ -19,7 +19,9 @@ matrix:
 #            - clang-3.9
              - lib64z1-dev
 #            - lib32z1-dev
+	           - zlib1g-dev
 #    - os: osx
 #      compiler: clang
 script:
   - sudo find / -name "libz*" -print
+  - sudo find / -name "zconf.h" -print
