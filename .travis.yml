@@ -9,6 +9,7 @@ matrix:
   include:
     - os: linux
       compiler: clang
+      env: MAKEFLAG="-j2"
       addons:
         apt:
           sources:
@@ -26,3 +27,4 @@ script:
   - sudo find / -name "libz.a" -print
   - sudo find / -name "libz.so" -print
   - sudo find / -name "zconf.h" -print
+  - echo $MAKEFLAG
