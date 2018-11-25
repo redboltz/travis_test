@@ -23,6 +23,20 @@ matrix:
              - zlib1g-dev
 #    - os: osx
 #      compiler: clang
+   - os: linux
+      compiler: gcc
+      addons:
+        apt:
+          sources:
+            - ubuntu-toolchain-r-test
+          packages:
+            - g++-multilib
+            - gcc-multilib
+            - gcc-7-multilib
+            - g++-7-multilib
+            - bzip2
+            - libc6-dbg
+ 
 script:
   - sudo find / -name "libz.a" -print
   - sudo find / -name "libz.so" -print
