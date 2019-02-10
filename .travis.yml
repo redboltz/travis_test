@@ -14,31 +14,23 @@ matrix:
         apt:
           sources:
             - ubuntu-toolchain-r-test
-            - llvm-toolchain-precise
-            - llvm-toolchain-precise-3.9
-          packages:
-#            - clang-3.9
-#            - lib64z1-dev
-             - lib32z1-dev
-             - zlib1g-dev
-#    - os: osx
-#      compiler: clang
-   - os: linux
-      compiler: gcc
-      addons:
-        apt:
-          sources:
-            - ubuntu-toolchain-r-test
+            - llvm-toolchain-trusty-5.0
+            - llvm-toolchain-trusty
+            - sourceline: 'ppa:mhier/libboost-latest'
           packages:
             - g++-multilib
             - gcc-multilib
             - gcc-7-multilib
             - g++-7-multilib
             - bzip2
+            - clang-5.0
             - libc6-dbg
- 
+            - boost1.67
+#    - os: osx
+#      compiler: clang
 script:
   - sudo find / -name "libz.a" -print
   - sudo find / -name "libz.so" -print
   - sudo find / -name "zconf.h" -print
+  - sudo find / -name "libboost*" -print
   - echo $MAKEFLAG
