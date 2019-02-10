@@ -26,11 +26,12 @@ matrix:
             - clang-5.0
             - libc6-dbg
             - boost1.67
-#    - os: osx
-#      compiler: clang
+    - os: osx
+      compiler: clang
 script:
   - sudo find / -name "libz.a" -print
   - sudo find / -name "libz.so" -print
   - sudo find / -name "zconf.h" -print
   - sudo find / -name "libboost*" -print
+  - sudo find / -name "openssl*" -print
   - echo $MAKEFLAG
