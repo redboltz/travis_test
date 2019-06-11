@@ -2,8 +2,11 @@ language: cpp
 sudo: false
 dist: trusty
 
+if: type != push OR branch = master OR branch =~ /^v\d+\.\d+(\.\d+)?(-\S*)?$/
+
 #install:
 # - if [ "$TRAVIS_OS_NAME" == "osx" ]; then brew install llvm; fi
+
 
 matrix:
   include:
@@ -26,8 +29,6 @@ matrix:
             - clang-5.0
             - libc6-dbg
             - boost1.67
-    - os: osx
-      compiler: clang
 script:
   - sudo find / -name "libz.a" -print
   - sudo find / -name "libz.so" -print
