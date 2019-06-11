@@ -2,6 +2,8 @@ language: cpp
 sudo: false
 dist: trusty
 
+if: type != push OR branch = master OR branch =~ /^v\d+\.\d+(\.\d+)?(-\S*)?$/
+
 #install:
 # - if [ "$TRAVIS_OS_NAME" == "osx" ]; then brew install llvm; fi
 
