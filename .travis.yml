@@ -17,8 +17,8 @@ matrix:
         apt:
           sources:
 #            - ubuntu-toolchain-r-test
-#            - llvm-toolchain-bionic-7.0
-#            - llvm-toolchain-bionic
+            - llvm-toolchain-bionic-8
+            - llvm-toolchain-bionic
             - sourceline: 'ppa:mhier/libboost-latest'
           packages:
 #            - g++-multilib
@@ -26,15 +26,15 @@ matrix:
 #            - gcc-7-multilib
 #            - g++-7-multilib
 #            - bzip2
-#            - clang-7.0
+            - clang-8
 #            - libc6-dbg
             - boost1.67
 script:
-  - sudo find / -name "libz.a" -print
-  - sudo find / -name "libz.so" -print
-  - sudo find / -name "zconf.h" -print
-  - sudo find / -name "libboost*" -print
-  - sudo find / -name "openssl*" -print
+#  - sudo find / -name "libz.a" -print
+#  - sudo find / -name "libz.so" -print
+#  - sudo find / -name "zconf.h" -print
+#  - sudo find / -name "libboost*" -print
+#  - sudo find / -name "openssl*" -print
   - echo $MAKEFLAG
   - g++ --version
   - clang++ --version
