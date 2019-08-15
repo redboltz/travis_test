@@ -28,7 +28,7 @@ matrix:
 #            - bzip2
 #            - clang-7.0
 #            - libc6-dbg
-            - boost1.68
+            - boost1.67
 script:
   - sudo find / -name "libz.a" -print
   - sudo find / -name "libz.so" -print
