@@ -19,7 +19,7 @@ matrix:
 #            - ubuntu-toolchain-r-test
 #            - llvm-toolchain-bionic-7.0
 #            - llvm-toolchain-bionic
-#            - sourceline: 'ppa:mhier/libboost-latest'
+            - sourceline: 'ppa:mhier/libboost-latest'
           packages:
 #            - g++-multilib
 #            - gcc-multilib
