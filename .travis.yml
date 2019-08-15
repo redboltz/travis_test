@@ -1,6 +1,6 @@
 language: cpp
 sudo: false
-dist: trusty
+dist: bionic
 
 if: type != push OR branch = master OR branch =~ /^v\d+\.\d+(\.\d+)?(-\S*)?$/
 
@@ -17,8 +17,8 @@ matrix:
         apt:
           sources:
             - ubuntu-toolchain-r-test
-            - llvm-toolchain-trusty-5.0
-            - llvm-toolchain-trusty
+            - llvm-toolchain-bionic-7.0
+            - llvm-toolchain-bionic
             - sourceline: 'ppa:mhier/libboost-latest'
           packages:
             - g++-multilib
@@ -26,9 +26,9 @@ matrix:
             - gcc-7-multilib
             - g++-7-multilib
             - bzip2
-            - clang-5.0
+            - clang-7.0
             - libc6-dbg
-            - boost1.67
+            - boost1.69
 script:
   - sudo find / -name "libz.a" -print
   - sudo find / -name "libz.so" -print
