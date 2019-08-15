@@ -16,19 +16,19 @@ matrix:
       addons:
         apt:
           sources:
-            - ubuntu-toolchain-r-test
-            - llvm-toolchain-bionic-7.0
-            - llvm-toolchain-bionic
-            - sourceline: 'ppa:mhier/libboost-latest'
+#            - ubuntu-toolchain-r-test
+#            - llvm-toolchain-bionic-7.0
+#            - llvm-toolchain-bionic
+#            - sourceline: 'ppa:mhier/libboost-latest'
           packages:
-            - g++-multilib
-            - gcc-multilib
-            - gcc-7-multilib
-            - g++-7-multilib
-            - bzip2
-            - clang-7.0
-            - libc6-dbg
-            - boost1.69
+#            - g++-multilib
+#            - gcc-multilib
+#            - gcc-7-multilib
+#            - g++-7-multilib
+#            - bzip2
+#            - clang-7.0
+#            - libc6-dbg
+            - boost1.68
 script:
   - sudo find / -name "libz.a" -print
   - sudo find / -name "libz.so" -print
@@ -36,3 +36,5 @@ script:
   - sudo find / -name "libboost*" -print
   - sudo find / -name "openssl*" -print
   - echo $MAKEFLAG
+  - g++ --version
+  - clang++ --version
