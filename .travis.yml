@@ -18,8 +18,8 @@ matrix:
           sources:
 #            - ubuntu-toolchain-r-test
             - sourceline: 'ppa:ubuntu-toolchain-r/test'
-            - llvm-toolchain-bionic-8
-            - llvm-toolchain-bionic
+#            - llvm-toolchain-bionic-8
+#            - llvm-toolchain-bionic
             - sourceline: 'ppa:mhier/libboost-latest'
           packages:
 #            - g++-multilib
@@ -40,3 +40,5 @@ script:
   - echo $MAKEFLAG
   - g++ --version
   - clang++ --version
+  - g++-9 --version
+  - clang++-8 --version
