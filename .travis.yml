@@ -17,6 +17,7 @@ matrix:
         apt:
           sources:
 #            - ubuntu-toolchain-r-test
+            - sourceline: 'ppa:ubuntu-toolchain-r/test'
             - llvm-toolchain-bionic-8
             - llvm-toolchain-bionic
             - sourceline: 'ppa:mhier/libboost-latest'
@@ -27,6 +28,7 @@ matrix:
 #            - g++-7-multilib
 #            - bzip2
             - clang-8
+            - g++-9
 #            - libc6-dbg
             - boost1.67
 script:
