@@ -28,8 +28,8 @@ matrix:
 #            - g++-7-multilib
 #            - bzip2
             - clang-8
-#            - g++-9
-            - gcov-9
+            - g++-9
+#            - gcov-9
 #            - libc6-dbg
             - boost1.67
 script:
