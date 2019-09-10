@@ -12,7 +12,7 @@ matrix:
   include:
     - os: linux
       compiler: clang
-      env: MAKEFLAG="-j2"
+      env: MAKEFLAG="-j2" TEST_FLAG="-DABC=1"
       addons:
         apt:
           sources:
@@ -38,6 +38,8 @@ script:
 #  - sudo find / -name "zconf.h" -print
 #  - sudo find / -name "libboost*" -print
 #  - sudo find / -name "openssl*" -print
+  - TEST_FLAG="${TEST_FLAG} -DDEF=2"
+  - echo $TEST_FLAG
   - echo $MAKEFLAG
   - g++ --version
   - gcov --version
