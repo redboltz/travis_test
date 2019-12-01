@@ -40,7 +40,9 @@ script:
 #  - sudo find / -name "zconf.h" -print
 #  - sudo find / -name "libboost*" -print
 #  - sudo find / -name "openssl*" -print
-  - ls -l /usr/local/opt/openssl
+  - ls -l /usr/local/opt/openssl/
+  - ls -l /usr/local/opt/openssl/include
+  - tree /usr/local/opt/openssl/
   - TEST_FLAG="${TEST_FLAG} -DDEF=2"
   - echo $TEST_FLAG
   - echo $MAKEFLAG
